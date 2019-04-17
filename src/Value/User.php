@@ -11,28 +11,15 @@ namespace App\Value;
 
 class User
 {
-    /** @var UserId */
-    private $userId;
     /** @var FullName */
     private $fullName;
+    /** @var UserName */
+    private $userName;
 
-    public function __construct(UserId $userId, FullName $fullName)
+    public function __construct(FullName $fullName, UserName $userName)
     {
-        $this->userId = $userId;
         $this->fullName = $fullName;
-    }
-
-    public function eqaulsTo(User $other)
-    {
-        return $this->userId->equalsTo($other->userId) && $this->fullName->equalsTo($other->fullName);
-    }
-
-    /**
-     * @return UserId
-     */
-    public function getUserId()
-    {
-        return $this->userId;
+        $this->userName = $userName;
     }
 
     /**
@@ -41,5 +28,13 @@ class User
     public function getFullName()
     {
         return $this->fullName;
+    }
+
+    /**
+     * @return UserName
+     */
+    public function getUserName(): UserName
+    {
+        return $this->userName;
     }
 }

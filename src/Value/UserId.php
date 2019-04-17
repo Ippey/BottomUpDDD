@@ -35,7 +35,7 @@ class UserId
     /**
      * @return int
      */
-    public function getUserId()
+    public function getValue()
     {
         return $this->userId;
     }
