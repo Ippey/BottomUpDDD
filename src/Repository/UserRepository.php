@@ -21,7 +21,7 @@ class UserRepository extends ServiceEntityRepository implements UserRepositoryIn
     }
 
     /**
-     * @param UserName $userId
+     * @param UserName $userName
      * @return User|null
      */
     public function findByUserName(UserName $userName)
